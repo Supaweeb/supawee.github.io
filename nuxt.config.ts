@@ -19,13 +19,15 @@ export default defineNuxtConfig({
     //...
   ],
   vite: {
+    build: {
+      rollupOptions: {
+        external: ['~/plugins/vuetify.js'] // Specify the Vuetify plugin file as external
+      }
+    },
     vue: {
       template: {
         transformAssetUrls,
       },
     },
   },
-  plugins: [
-    '~/plugins/vuetify.js'
-  ]
 })

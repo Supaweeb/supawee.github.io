@@ -1,5 +1,6 @@
 import { defineNuxtConfig } from 'nuxt/config'
-import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import { transformAssetUrls } from 'vite-plugin-vuetify'
+
 export default defineNuxtConfig({
   //...
   app: {
@@ -17,6 +18,9 @@ export default defineNuxtConfig({
       })
     },
     //...
+  ],
+  plugins: [
+    { src: '~/plugins/vuetify', mode: 'client' } // Register Vuetify plugin
   ],
   vite: {
     build: {

@@ -6,19 +6,19 @@ const salary = ref()
 const debt = ref(0)
 
 const handleOnSubmit = () => {
-    if (name.value && salary.value && debt.value) {
-    }
+  if (name.value && salary.value && debt.value) {
+  }
 }
 
 const rules = [
-  value => {
+  (value: string) => {
     if (value) return true
 
     return 'กรุณากรอกข้อมูลให้ครบถ้วน'
   }
 ]
 const numberRules = [
-  value => {
+  (value: string) => {
     if (Number(value)) return true
 
     return 'กรุณากรอกจำนวนเงินให้ถูกต้อง'
@@ -55,7 +55,6 @@ const numberRules = [
               placeholder="กรุณากรอกจำนวนเงิน"
               v-model="debt"
               type="number"
-              
             ></v-text-field>
           </v-col>
         </v-row>

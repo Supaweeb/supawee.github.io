@@ -3,7 +3,7 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   //...
   app: {
-    baseURL: '/work-checker/'
+    baseURL: '/'
   },
   devtools: { enabled: true },
   build: {

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { VRow } from 'vuetify/components'
 
 const name = ref()
 const salary = ref()
@@ -29,35 +30,35 @@ const numberRules = [
   <v-sheet>
     <v-form fast-fail @submit.prevent="handleOnSubmit">
       <div class="pa-5">
-        <v-row>
-          <v-col cols="12">
+        <VRow>
+          <VCol cols="12">
             <v-text-field
               label="ชื่อ"
               placeholder="กรุณากรอกชื่อ"
               v-model="name"
               :rules="rules"
             ></v-text-field>
-          </v-col>
-          <v-col cols="12">
+          </VCol>
+          <VCol cols="12">
             <v-text-field
               label="จำนวนเงิน"
               placeholder="กรุณากรอกจำนวนเงิน"
-              v-model="salary"
+              :model="salary"
               :rules="numberRules"
               type="number"
             ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12">
+          </VCol>
+        </VRow>
+        <VRow>
+          <VCol cols="12">
             <v-text-field
               label="หักเงินเป็นจำนวน"
               placeholder="กรุณากรอกจำนวนเงิน"
               v-model="debt"
               type="number"
             ></v-text-field>
-          </v-col>
-        </v-row>
+          </VCol>
+        </VRow>
       </div>
       <v-btn type="submit" block class="mt-2">Submit</v-btn>
     </v-form>

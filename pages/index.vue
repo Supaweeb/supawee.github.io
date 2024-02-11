@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { VRow } from 'vuetify/components'
+import { VRow, VCol } from 'vuetify/components'
 
 const name = ref()
 const salary = ref()
